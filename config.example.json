@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "generator": {
+    "script": "generate_extension_matrices.js",
+    "deviceName": "<stable-device-label>",
+    "inventoryOutput": "extensions_inventory_state.json",
+    "auditOutput": "extensions_audit.json"
+  },
+  "notion": {
+    "parentPageId": "<notion-parent-page-id>",
+    "databases": {
+      "extensions": {
+        "pageId": "<notion-page-id>",
+        "dataSourceId": "<notion-data-source-id>"
+      },
+      "profiles": {
+        "pageId": "<notion-page-id>",
+        "dataSourceId": "<notion-data-source-id>"
+      },
+      "enablements": {
+        "pageId": "<notion-page-id>",
+        "dataSourceId": "<notion-data-source-id>"
+      },
+      "auditTargets": {
+        "pageId": "<notion-page-id>",
+        "dataSourceId": "<notion-data-source-id>"
+      },
+      "auditFindings": {
+        "pageId": "<notion-page-id>",
+        "dataSourceId": "<notion-data-source-id>"
+      }
+    }
+  },
+  "conventions": {
+    "defaultProfileName": "Default (All profiles)"
+  },
+  "policies": {
+    "allowIcons": false,
+    "preserveViews": true,
+    "deleteAbsentExtensions": false
+  }
+}

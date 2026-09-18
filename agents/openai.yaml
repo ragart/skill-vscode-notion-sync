@@ -1,0 +1,4 @@
+interface:
+  display_name: "VS Code Notion Sync"
+  short_description: "Sync VS Code profiles and audit targets"
+  default_prompt: "Use $vscode-notion-sync to regenerate my VS Code reports and safely synchronize the Notion backup and audit dashboards."
