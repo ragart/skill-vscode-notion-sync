@@ -1,7 +1,7 @@
 # VS Code Notion Sync
 
-A Codex skill for regenerating VS Code profile reports and safely reconciling
-a Notion backup and exception-only extension audit dashboard.
+A focused Agent Skill for regenerating VS Code profile reports and safely
+reconciling a Notion backup and exception-only extension audit dashboard.
 
 ## Use cases
 
@@ -12,12 +12,15 @@ a Notion backup and exception-only extension audit dashboard.
 
 ## Installation
 
-Clone this repository into a durable skills directory or expose it with a
-symlink:
+Keep one canonical checkout and expose it through the standard Agent Skill
+directory:
 
-```sh
-ln -s /path/to/vscode-notion-sync ~/.agents/skills/vscode-notion-sync
+```bash
+ln -s /absolute/path/to/vscode-notion-sync \
+  ~/.agents/skills/vscode-notion-sync
 ```
+
+Restart or refresh Agent Skill discovery after first installation.
 
 Copy `config.example.json` to `config.local.json` beside `SKILL.md` and fill in
 its Notion IDs and project-specific settings. The filename is ignored by Git;
@@ -42,13 +45,15 @@ Regenerate my VS Code profile reports.
 Audit my VS Code targets and update Notion.
 ```
 
+A natural-language request can activate the Agent Skill automatically.
 A plain “run the sync” request performs both backup and audit reconciliation.
 Report-only requests do not mutate Notion.
 
 ## Repository structure
 
 - `SKILL.md`: agent-facing routing, safeguards, and high-level workflow.
-- `agents/openai.yaml`: skill display metadata and default invocation prompt.
+- `agents/openai.yaml`: Agent Skill display metadata and default invocation
+  prompt.
 - `config.example.json`: non-sensitive configuration template.
 - `config.local.json`: ignored, deployment-specific configuration created by
   the user; never committed.
@@ -63,8 +68,9 @@ Report-only requests do not mutate Notion.
 Keep project-specific identifiers and paths out of this repository. Validate
 changes with:
 
-```sh
-python3 /path/to/skill-creator/scripts/quick_validate.py /path/to/vscode-notion-sync
+```bash
+python3 /path/to/skill-creator/scripts/quick_validate.py \
+  /absolute/path/to/vscode-notion-sync
 ```
 
 Run the configured project generator and inspect both JSON outputs after

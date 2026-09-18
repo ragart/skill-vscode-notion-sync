@@ -1,6 +1,6 @@
 ---
 name: vscode-notion-sync
-description: Regenerate and reconcile a VS Code profile and extension backup plus target-audit dashboards in Notion. Use for report generation, VS Code-to-Notion synchronization, extension/profile reconciliation, audit-target refreshes, or drift checks in a configured vscode-profiles project; do not use for unrelated VS Code or general Notion work.
+description: Regenerate and reconcile VS Code profile reports, extension backups, and audit dashboards in Notion. Use in a configured vscode-profiles project; do not use for unrelated VS Code administration or general Notion work.
 ---
 
 # VS Code Notion Sync
